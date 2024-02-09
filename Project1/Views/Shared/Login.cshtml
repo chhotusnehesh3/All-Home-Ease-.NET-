@@ -1,0 +1,76 @@
+﻿@model Project1.Models.UserTb 
+ 
+@{ 
+    ViewData["Title"] = "Login"; 
+}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .login-container {
+        margin-top: 50px;
+    }
+
+    .login-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form label {
+        font-weight: bold;
+    }
+
+    .login-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .login-form .btn-primary {
+        width: 100%;
+    }
+</style>
+<h1 style="text-align:center">Login</h1>
+
+<hr />
+<div class="container login-container">
+
+<div class="row" style="justify-content:center"> 
+    <div class="col-md-4"> 
+        @{ 
+            if(ViewBag.Message != null) 
+            { 
+                <p style="color:red">@ViewBag.Message</p> 
+            } 
+        } 
+        <form asp-action="Login" class="login-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+         
+   
+            <div class="form-group"> 
+                <label asp-for="Email" class="control-label"></label> 
+                <input asp-for="Email" class="form-control" /> 
+                <span asp-validation-for="Email" class="text-danger"></span> 
+            </div> 
+      
+       
+            <div class="form-group"> 
+                <label asp-for="Password" class="control-label"></label> 
+                <input asp-for="Password" class="form-control" /> 
+                <span asp-validation-for="Password" class="text-danger"></span> 
+            </div> 
+        
+            <div class="form-group"> 
+                <input type="submit" value="Login" class="btn btn-primary" /> 
+            </div> 
+        </form> 
+    </div> 
+</div> 
+</div>
+ 
+ 
+ 
+@section Scripts { 
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} 
+}

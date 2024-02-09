@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            .card {
+                margin: 20px;
+                display: inline-block;
+                cursor: pointer;
+                border: 0;
+                margin-top: 90px;
+            }
+
+                .card img {
+                    height: 300px;
+                    width: 300px;
+                    display: block;
+                    border-radius: 5px;
+                }
+
+            .card-body {
+                width: 300px;
+            }
+
+            .button {
+                position: relative;
+                width: 100%;
+                height: 40px;
+                background-color: navy;
+                color: white;
+                border-radius: 5px;
+                border: none;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="text-align: center; color: navy;">Admin Page</h1>
+            <div class="row">
+                <div class="card col mb-4">
+                    <img src="https://cdn3.iconfinder.com/data/icons/team-management/136/28-512.png" alt="employee image" class="rounded mx-auto d-block" />
+                    <div class="card-body">
+                        <a asp-area="" asp-controller="EmployeeTbs" asp-action="index"><button class="button">Employee</button></a>
+                    </div>
+                </div>
+
+                <div class="card col mb-4">
+                    <img src="https://images.assetsdelivery.com/compings_v2/lvnl/lvnl2102/lvnl210200039.jpg" alt="Services image" class="rounded mx-auto d-block" />
+                    <div class="card-body">
+                    <a asp-area="" asp-controller="ServiceTbs" asp-action="index"><button class="button">Services</button></a>
+                    </div>
+                </div>
+
+                <div class="card col mb-4">
+                    <img src="https://i.pinimg.com/564x/ec/67/0e/ec670e9c443ed73c179753a8927e2b41.jpg" alt="Orders image" class="rounded mx-auto d-block" />
+                    <div class="card-body">
+                         <a asp-area="" asp-controller="OrdersTbs" asp-action="index"><button class="button">Orders</button></a>
+                    </div>
+                </div>
+
+                <div class="card col mb-4">
+                <img src="https://www.pngitem.com/pimgs/m/164-1645056_list-icons-free-list-icon-download-iconhot-user.png" alt="feedback image" class="rounded mx-auto d-block" />
+                    <div class="card-body">
+                    <a asp-area="" asp-controller="UserTbs" asp-action="index"><button class="button">Show Users</button></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

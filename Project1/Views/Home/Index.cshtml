@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+
+    <div class="slider">
+        <div class="load">
+            <center>
+                <h2 style="color: white;">Welcome to Home Services</h2>
+            </center>
+            <div class="content">
+                <div class="principal">
+                    <h2 style="color: white;">
+                        <strong>Extraordinary service for extraordinary customers</strong>
+                    </h2>
+
+                    <p style="color: white; font-family: Arial; font-weight: 600; margin-top: 10px; font-size: 25px;">
+                        ONE STOP SOLUTION FOR ALL YOUR NEEDS <br /> To our detailed system of providing services
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: -15px; text-align: center;">
+                <br /><br />
+                <h3 style="color: white;">Our Popular Home Services</h3><br /><br />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card" style="margin-top: 20px; border: 0;border-radius:25px;">
+                                <img class="card-img-top" src="~/images/Computer-Repairing.jpg" alt="Card image cap" height="200px" style="border-top-left-radius:25px;border-top-right-radius:25px" />
+                                <div class="card-body" style="height: 160px">
+                                    <h5 class="card-title">Computer Repairing</h5>
+                                    <p class="card-text">
+                                    ₹ 500-10,500 <s>₹ 12,995.00</s><p> Computer Repairing
+                                    </p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="margin-top: 20px; border: 0;border-radius:25px;">
+                                <img class="card-img-top" src="~/images/painting.jpg" alt="Card image cap" height="200px" style="border-top-left-radius:25px;border-top-right-radius:25px" />
+                                <div class="card-body" style="height: 160px">
+                                    <h5 class="card-title">Painting Services</h5>
+                                    <p class="card-text">₹ 5000-25,000 <s>₹ 35,995.00</s><p>Painting Services</p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm" style="border-radius: 30px">
+                            <div class="card" style="margin-top: 20px; border: 0; border-radius:25px;">
+                                <img class="card-img-top" src="~/images/House-Keeping.jpg" alt="Card image cap" height="200px" style="border-top-left-radius:25px;border-top-right-radius:25px" />
+                                <div class="card-body" style="height: 160px">
+                                    <h5 class="card-title">Housekeeping</h5>
+                                    <p class="card-text">₹ 2,500.00-5 <s>₹ 10,995.00</s><p>Housekeeping Services</p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+@section scripts {
+    <script src="~/js/Slider.js"></script>
+    <link rel="stylesheet" href="~/css/Slider.css" />
+}

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Project1.Models.ServiceTb>
+
+@{
+    ViewData["Title"] = "Index";
+    <link href="~/css/index.css" rel="stylesheet" />
+
+}
+
+<h1>Service-List</h1>
+
+<p class="paragraph">
+    <Button style="border:none"><a asp-action="Create" class="add-btn">Add Service</a></Button>
+</p>
+<table class="table">
+    <thead>
+        <tr class="tablehead1">
+            <th>
+                @Html.DisplayNameFor(model => model.LongDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceCharge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortDesc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceCharge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortDesc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-controller="Upload" asp-action="UploadImage" asp-route-id="@item.Id">Upload image</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
